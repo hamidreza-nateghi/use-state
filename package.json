@@ -1,0 +1,20 @@
+{
+  "name": "@nateghi/use-state",
+  "version": "1.0.0",
+  "description": "useState as a store",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "use",
+    "store",
+    "state",
+    "useState",
+    "use-state",
+    "hook"
+  ],
+  "author": "Hamidreza Nateghi",
+  "license": "ISC"
+}
