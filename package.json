@@ -1,10 +1,14 @@
 {
-  "name": "@nateghi/use-state",
-  "version": "1.0.0",
+  "name": "@hamidreza.nateghi/use-state",
+  "version": "1.0.3",
   "description": "useState as a store",
-  "main": "index.ts",
+  "type": "module",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf ./dist",
+    "build": "yarn clean && rollup --config",
+    "prepack": "yarn build"
   },
   "keywords": [
     "react",
@@ -13,14 +17,40 @@
     "state",
     "useState",
     "use-state",
+    "redux",
+    "zustand",
+    "context",
+    "management",
     "hook"
   ],
   "author": "Hamidreza Nateghi",
   "license": "ISC",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "module": "./dist/esm/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
   "dependencies": {
     "use-sync-external-store": "^1.2.0"
   },
   "devDependencies": {
-    "@types/use-sync-external-store": "^0.0.3"
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/use-sync-external-store": "^0.0.3",
+    "rollup": "^3.19.0",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
   }
 }

@@ -1,20 +1,20 @@
-# useStore as a store
+# useState as a store
 
 You can try a live demo [here](https://).
 
 ```bash
-npm install @nateghi/use-state # or yarn add @nateghi/use-state
+npm install @hamidreza.nateghi/use-state # or yarn add @hamidreza.nateghi/use-state
 ```
 
 ## First create a store
 
 ```jsx
-import { create } from '@nateghi/use-state'
+import create from '@hamidreza.nateghi/use-state'
 
 const useState = create({
   count: 0,
   todos: [],
-  theme: 'dark'
+  theme: 'dark',
 })
 ```
 
